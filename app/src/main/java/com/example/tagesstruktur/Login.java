@@ -19,10 +19,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         login_B.setOnClickListener(this);
     }
 
-
+    //todo: Hier müssen wir noch unterschiedliche Activities starten, je nachdem ob wir Registrierung oder Login durchführen
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, Menu.class);
+        Intent intent = new Intent(this, Preferences_Interaction.class);
         Login.this.startActivity(intent);
     }
 }
