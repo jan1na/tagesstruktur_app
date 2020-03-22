@@ -22,12 +22,6 @@
             android:layout_margin="15dp"
             >
         </TextView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/skills_LL"
-            >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,19 +29,34 @@
                 style="@style/resource_titles"
                 >
 
+
+
             </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/skills_LL"
+            >
+
+             <!--
+            <TextView
+                style="@style/resource_attributes"
+                android:text="Fähigkeit 1"
+                >
+
+
+            </TextView>
+
+
             <TextView
                 style="@style/resource_attributes"
                 android:text="Fähigkeit 1"
                 >
 
             </TextView>
-            <TextView
-                style="@style/resource_attributes"
-                android:text="Fähigkeit 1"
-                >
-
-            </TextView>
+            -->
+        </LinearLayout>
             <Button
                 android:id="@+id/add_skill_B"
                 android:layout_width="wrap_content"
@@ -66,18 +75,15 @@
                 >
 
             </TextView>
-            <TextView
-                style="@style/resource_attributes"
-                android:text="Fähigkeit 1"
-                >
+            <LinearLayout
+                android:id="@+id/activities_LL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            </TextView>
-            <TextView
-                style="@style/resource_attributes"
-                android:text="Fähigkeit 1"
-                >
 
-            </TextView>
+
+            </LinearLayout>
             <Button
                 android:id="@+id/add_activity_B"
                 android:layout_width="wrap_content"
@@ -88,8 +94,6 @@
 
             </Button>
 
-
-        </LinearLayout>
     </LinearLayout>
     </ScrollView>
     <RelativeLayout
