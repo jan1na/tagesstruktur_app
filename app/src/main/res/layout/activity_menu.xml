@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/menu_LL"
+            android:orientation="vertical"
+            >
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Wecker"
+                   style="@style/menu_text_style"
+                   >
+
+               </TextView>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:text="Menü"
+                   style="@style/menu_text_style"
+                   >
+
+               </TextView>
+           </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_menu_TV"
+                android:textSize="16dp"
+                android:text="22.03.2020"
+                android:layout_gravity="center_horizontal"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schön, dass Du da bist!"
+                android:layout_gravity="center_horizontal"
+                android:textSize="32sp"
+                >
+            </TextView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+                <TextView
+                    style="@style/menu_bottoms"
+                    android:id="@+id/activities_menu_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aktivitäten"
+                    android:layout_centerInParent="true">
+                </TextView>
+                <TextView
+                    style="@style/menu_bottoms"
+                    android:id="@+id/ressources_menu_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meine Ressourcen"
+                    android:layout_alignParentRight="true">
+
+                </TextView>
+                <TextView
+                    style="@style/menu_bottoms"
+                    android:id="@+id/dayplan_menu_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tagesplan"
+                    android:layout_alignParentLeft="true">
+
+                </TextView>
+                <TextView
+                    style="@style/menu_bottoms"
+                    android:id="@+id/weekplan_menu_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wochenplan"
+                    android:layout_alignParentBottom="true">
+
+                </TextView>
+                <TextView
+                    style="@style/menu_bottoms"
+                    android:id="@+id/success_menu_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Erfolge"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true">
+
+                </TextView>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/menu_bottoms"
+                android:layout_gravity="center_horizontal"
+                android:text="Notfall">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mein Profil"
+                style="@style/menu_text_style"
+                android:textSize="22sp"
+                >
+
+            </TextView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Über uns"
+                    style="@style/menu_bottoms_buttom"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feedback"
+                    style="@style/menu_bottoms_buttom"
+                    android:layout_centerInParent="true"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hilfe"
+                    style="@style/menu_bottoms_buttom"
+                    android:layout_alignParentRight="true"
+                    >
+                </TextView>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".My_resources">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ressources_SV"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meine Ressourcen"
+            android:textSize="32dp"
+            android:layout_margin="15dp"
+            >
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/skills_LL"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fähigkeiten"
+                style="@style/resource_titles"
+                >
+
+            </TextView>
+            <TextView
+                style="@style/resource_attributes"
+                android:text="Fähigkeit 1"
+                >
+
+            </TextView>
+            <TextView
+                style="@style/resource_attributes"
+                android:text="Fähigkeit 1"
+                >
+
+            </TextView>
+            <Button
+                android:id="@+id/add_skill_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="neue Fähigkeit hinzufügen"
+                android:layout_gravity="center_horizontal"
+                >
+
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lieblingsaktivitäten"
+                style="@style/resource_titles"
+                >
+
+            </TextView>
+            <TextView
+                style="@style/resource_attributes"
+                android:text="Fähigkeit 1"
+                >
+
+            </TextView>
+            <TextView
+                style="@style/resource_attributes"
+                android:text="Fähigkeit 1"
+                >
+
+            </TextView>
+            <Button
+                android:id="@+id/add_activity_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="neue Aktivität hinzufügen"
+                android:layout_gravity="center_horizontal"
+                >
+
+            </Button>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/add_resource_RL"
+        >
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            >
+        <EditText
+            android:id="@+id/add_resource_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_resource_B"
+            android:text="Hinzufügen"
+            >
+
+        </Button>
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
