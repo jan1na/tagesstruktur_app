@@ -18,5 +18,13 @@
     <string name="radio_button_vormittags_sport">Vormittags</string>
     <string name="radio_button_nachmittags_sport">Nachmittags</string>
     <string name="Button_plan_erstellung">Erstelle mir meinen Plan!</string>
+    <string name="wrong_password_login_message">Falsches Password</string>
+    <string name="not_identical_passwords_registration_message">Passwörter sind nicht identisch!</string>
+    <string name="login_button_label">Login</string>
+    <string name="registrate_login_label">Registrieren</string>
+    <string name="welcome_registration_title">Wilkommen\n bei Daily Buddy</string>
+    <string name="welcome_messages_login">Hi, %1$s!\nWilkommen zurück bei Daily Buddy.</string>
+    <string name="registrations_instruction">Hier neu registrieren:</string>
+    <string name="already_registrated_message">Du bist schon registriert!</string>
 
 </resources>

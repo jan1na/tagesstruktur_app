@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -18,8 +18,9 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="LoginButtons">
-        <item name="android:layout_width">300dp</item>
-        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
         <item name="android:maxLines">1</item>
     </style>
 
@@ -54,6 +55,25 @@
         <item name="android:layout_margin">5dp</item>
         <item name="android:padding">10dp</item>
         <item name="background">@drawable/resource_fields</item>
+    </style>
+
+    <style name="linear_layout_login">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_margin">32dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="big_welcome_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginTop">46dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textSize">32sp</item>
     </style>
 
 </resources>

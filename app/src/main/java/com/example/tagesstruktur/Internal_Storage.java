@@ -4,6 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -48,6 +49,11 @@ public class Internal_Storage {
         } catch (Exception e) {
             Toast.makeText(context,"Error in Internal Storage"+ e.getMessage(),Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public boolean fileExists(){
+        File f = context.getFileStreamPath(file);
+        return !(f == null || !f.exists());
     }
 
     public List<String> readData() {
