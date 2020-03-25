@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="8dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    >
+
+    <TextView
+        android:id="@+id/day_plan_time_row_TV"
+        style="@style/day_plan_time"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/day_plan_activity_row_TV"
+        android:layout_width="match_parent"
+        style=""
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

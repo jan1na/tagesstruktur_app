@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Preferences_Interaction2"/>
+        <activity android:name=".DayPlan"></activity>
+        <activity android:name=".Preferences_Interaction2" />
         <activity android:name=".Preferences_Interaction" />
         <activity android:name=".My_resources" />
         <activity android:name=".Menu" />

@@ -41,6 +41,16 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        TextView day_plan_menu_TV = findViewById(R.id.dayplan_menu_TV);
+        day_plan_menu_TV.setClickable(true);
+        day_plan_menu_TV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Menu.this, DayPlan.class);
+                Menu.this.startActivity(intent);
+            }
+        });
+
 
     }
 }
