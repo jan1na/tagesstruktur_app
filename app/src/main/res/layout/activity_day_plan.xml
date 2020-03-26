@@ -22,17 +22,80 @@
                 android:id="@+id/day_plan_RV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
                 />
 
         </RelativeLayout>
         <TextView
-            android:layout_width="match_parent"
             android:id="@+id/title_day_plan_TV"
-            android:elevation="4dp"
             style="@style/title_bar"
             >
         </TextView>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/add_plans_RL"
+    android:layout_gravity="center"
+    android:layout_margin="16dp"
+    android:background="@android:color/white"
+    android:alpha="0.8"
+    android:visibility="invisible"
+    >
+
+        <DatePicker android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            />
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/get_activity_ET"
+            android:layout_centerInParent="true"
+            android:hint="Aktivität"
+            android:visibility="invisible"
+            >
+
+        </EditText>
+    </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="30dp"
+            android:text="wählen"
+            android:visibility="invisible"
+            android:id="@+id/pick_input_B"
+            >
+
+        </Button>
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_plan_in_day_plan_B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="6dp"
+            >
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 </FrameLayout>

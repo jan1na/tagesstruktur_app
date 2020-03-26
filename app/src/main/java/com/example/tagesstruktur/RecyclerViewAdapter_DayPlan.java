@@ -9,17 +9,17 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapter_DayPlan extends RecyclerView.Adapter<RecyclerViewAdapter_DayPlan.ViewHolder> {
 
-    private List<DayPlan_Database.DataSet> mData;
+    private List<DayPlan_Database.DataSet_DayPlan> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    MyRecyclerViewAdapter(Context context, List<DayPlan_Database.DataSet> data) {
+    RecyclerViewAdapter_DayPlan(Context context, List<DayPlan_Database.DataSet_DayPlan> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -34,7 +34,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        SimpleDateFormat hours_minutes = new SimpleDateFormat("HH:MM");
+        SimpleDateFormat hours_minutes = new SimpleDateFormat("HH:mm", Locale.GERMAN);
         String time = hours_minutes.format(mData.get(position).getDate());
         holder.timeTV.setText(time);
         holder.activityTV.setText(mData.get(position).getActivity());

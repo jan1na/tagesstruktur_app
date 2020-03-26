@@ -88,16 +88,21 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:paddingStart">72dp</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">#aaaaaa</item>
     </style>
 
     <style name="day_plan_time">
         <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">fill_parent</item>
         <item name="android:textSize">16sp</item>
-        <item name="paddingStart">4dp</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="day_plan_content">
         <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
 </resources>
