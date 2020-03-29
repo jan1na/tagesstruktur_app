@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Successes">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_light">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/successes_RV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:id="@+id/successes_title_TV"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:background="@android:color/holo_blue_bright"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:id="@+id/success_back_B"
+            android:elevation="4dp"
+            android:text="@string/successes_back_button_sign"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:background="@android:color/holo_blue_dark"
+            >
+
+        </TextView>
+
+        <TextView
+            android:background="@android:color/holo_blue_dark"
+            android:padding="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:id="@+id/success_next_B"
+            android:layout_gravity="right"
+            android:elevation="4dp"
+            android:text="@string/successes_next_button_sign"
+            android:textStyle="bold"
+            >
+        </TextView>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

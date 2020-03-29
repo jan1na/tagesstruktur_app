@@ -26,5 +26,8 @@
     <string name="welcome_messages_login">Hi, %1$s!\nWilkommen zurück bei Daily Buddy.</string>
     <string name="registrations_instruction">Hier neu registrieren:</string>
     <string name="already_registrated_message">Du bist schon registriert!</string>
+    <string name="add_picture_to_activity_text">Bild hinzufügen</string>
+    <string name="successes_back_button_sign"><![CDATA[<-]]></string>
+    <string name="successes_next_button_sign"><![CDATA[->]]></string>
 
 </resources>

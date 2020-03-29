@@ -7,7 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Internal_Database {
 
@@ -123,6 +125,24 @@ public class Internal_Database {
 
         cursor.close();
         return result;
+    }
+
+    /**
+     *
+     * @param data pairs of column and data that needs to be updated
+     * @param condition which row needs to be updated
+     * @return true if everything is done
+     */
+    public boolean update(HashMap<String, String> data, String condition){
+        StringBuilder query = new StringBuilder();
+        query.append("UPDATE ").append(table).append(" SET ");
+        for (Map.Entry<String, String> d : data.entrySet()){
+            query.append(d.getKey()).append(" = ").append(d.getValue()).append(",");
+        }
+        query.deleteCharAt(query.length()-1);
+        query.append(" WHERE ").append(condition).append(";");
+        dataBase.execSQL(query.toString());
+        return true;
     }
 
 }

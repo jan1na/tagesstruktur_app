@@ -1,9 +1,11 @@
 package com.example.tagesstruktur;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,14 +14,14 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
 
-public class RecyclerViewAdapter_DayPlan extends RecyclerView.Adapter<RecyclerViewAdapter_DayPlan.ViewHolder> {
+public class RecyclerViewAdapter_Successes extends RecyclerView.Adapter<RecyclerViewAdapter_Successes.ViewHolder> {
 
     private List<DayPlan_Database.DataSet_DayPlan> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    RecyclerViewAdapter_DayPlan(Context context, List<DayPlan_Database.DataSet_DayPlan> data) {
+    RecyclerViewAdapter_Successes(Context context, List<DayPlan_Database.DataSet_DayPlan> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -27,17 +29,17 @@ public class RecyclerViewAdapter_DayPlan extends RecyclerView.Adapter<RecyclerVi
     // inflates the row layout from xml when needed
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.recycler_view_day_plan_row, parent, false);
+        View view = mInflater.inflate(R.layout.recycler_view_successes_row, parent, false);
         return new ViewHolder(view);
     }
 
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        SimpleDateFormat hours_minutes = new SimpleDateFormat("HH:mm", Locale.GERMAN);
-        String time = hours_minutes.format(mData.get(position).getDate());
-        holder.timeTV.setText(time);
-        holder.activityTV.setText(mData.get(position).getActivity());
+        holder.success_TV.setText(mData.get(position).getActivity());
+        if(mData.get(position).isPictureSet()){
+            holder.success_IV.setImageURI(mData.get(position).getPicture());
+        }
     }
 
     // total number of rows
@@ -49,12 +51,13 @@ public class RecyclerViewAdapter_DayPlan extends RecyclerView.Adapter<RecyclerVi
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView timeTV, activityTV;
+        TextView success_TV;
+        ImageView success_IV;
 
         ViewHolder(View itemView) {
             super(itemView);
-            timeTV = itemView.findViewById(R.id.day_plan_time_row_TV);
-            activityTV = itemView.findViewById(R.id.day_plan_activity_row_TV);
+            success_TV = itemView.findViewById(R.id.text_success_TV);
+            success_IV = itemView.findViewById(R.id.image_success_IV);
             itemView.setOnClickListener(this);
         }
 
@@ -65,7 +68,7 @@ public class RecyclerViewAdapter_DayPlan extends RecyclerView.Adapter<RecyclerVi
     }
 
     // convenience method for getting data at click position
-    DayPlan_Database.DataSet_DayPlan getItem(int id) {
+    DayPlan_Database.DataSet getItem(int id) {
         return mData.get(id);
     }
 

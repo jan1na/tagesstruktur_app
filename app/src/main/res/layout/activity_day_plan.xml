@@ -5,86 +5,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DayPlan">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray"
-        >
+        android:background="@android:color/darker_gray">
 
-        <RelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_marginTop="56dp"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:layout_marginTop="56dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/day_plan_RV"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+                android:layout_height="match_parent" />
 
         </RelativeLayout>
+
         <TextView
             android:id="@+id/title_day_plan_TV"
-            style="@style/title_bar"
-            >
-        </TextView>
+            style="@style/title_bar"></TextView>
 
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/add_plans_RL"
-    android:layout_gravity="center"
-    android:layout_margin="16dp"
-    android:background="@android:color/white"
-    android:alpha="0.8"
-    android:visibility="invisible"
-    >
-
-        <DatePicker android:id="@+id/datePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:layout_centerInParent="true"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false"
-            />
-
-        <TimePicker
-            android:id="@+id/time_picker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:timePickerMode="spinner"
-            android:layout_centerInParent="true"
-            android:visibility="invisible"
-            />
-
-        <EditText
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/get_activity_ET"
-            android:layout_centerInParent="true"
-            android:hint="Aktivität"
             android:visibility="invisible"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32dp"
+            android:id="@+id/activity_in_focus_RL"
+            android:background="@android:color/holo_blue_light"
             >
 
-        </EditText>
-    </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:id="@+id/activity_in_focus_TV"
+                android:gravity="center"
+                android:textSize="24sp"
+                ></TextView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_in_focus_IV"
+                android:layout_weight="1"
+                android:layout_below="@id/activity_in_focus_TV"
+                >
+
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="70dp"
+                android:text="@string/add_picture_to_activity_text"
+                android:id="@+id/add_picture_to_activity_TV"
+                android:gravity="center"
+                android:layout_below="@id/activity_in_focus_TV"
+                >
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_plans_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:alpha="0.8"
+            android:background="@android:color/white"
+            android:visibility="invisible">
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:visibility="invisible" />
+
+            <TimePicker
+                android:id="@+id/time_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:timePickerMode="spinner"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/get_activity_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Aktivität"
+                android:visibility="invisible">
+
+            </EditText>
+        </RelativeLayout>
 
         <Button
+            android:id="@+id/pick_input_B"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginBottom="30dp"
             android:text="wählen"
-            android:visibility="invisible"
-            android:id="@+id/pick_input_B"
-            >
+            android:visibility="invisible">
 
         </Button>
-
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -92,12 +129,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:layout_margin="6dp"
-            >
+            android:layout_margin="6dp">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
-</FrameLayout>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
