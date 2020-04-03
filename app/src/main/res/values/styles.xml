@@ -2,50 +2,84 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+       <!-- Customize your theme here. -->
+        <item name="colorPrimary">?attr/primary</item>
+        <item name="colorPrimaryDark">?attr/primary_dark</item>
+        <item name="colorAccent">?attr/secondary</item>
     </style>
+
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="LoginButtons">
+
+    <style name="general_button">
+        <item name="android:background">@drawable/general_button</item>
+        <item name="android:textColor">?attr/on_primary</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="preferences_spinner">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">?attr/primary</item>
+    </style>
+
+    <style name="preferences_radio_bottom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/on_surface</item>
+    </style>
+
+    <style name="preferences_linear_layout">
+        <item name="android:background">@drawable/surface_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+
+    <style name="menu_buttons">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:layout_margin">8dp</item>
-        <item name="android:maxLines">1</item>
+        <item name="elevation">4dp</item>
+        <item name="android:textColor">?attr/on_primary</item>
+        <item name="android:background">@drawable/general_button</item>
     </style>
 
-    <style name="menu_text_style">
-        <item name="android:textSize">18sp</item>
-        <item name="android:layout_margin">10dp</item>
-    </style>
-
-    <style name="menu_bottoms">
-        <item name="android:textSize">18sp</item>
-        <item name="android:padding">15dp</item>
-        <item name="android:layout_margin">20dp</item>
-        <item name="android:background">@drawable/button_style</item>
-    </style>
-
-    <style name="menu_bottoms_buttom">
+    <style name="menu_buttons_bottom">
         <item name="android:textSize">16sp</item>
         <item name="android:padding">15dp</item>
-        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">?attr/on_background_hint</item>
     </style>
 
     <style name="resource_titles">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:padding">10dp</item>
+        <item name="android:textColor">?attr/on_surface</item>
     </style>
 
     <style name="resource_attributes">
@@ -57,23 +91,23 @@
         <item name="background">@drawable/resource_fields</item>
     </style>
 
-    <style name="linear_layout_login">
-        <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:layout_margin">32dp</item>
-        <item name="android:layout_width">match_parent</item>
+    <style name="preferences_text">
+        <item name="android:textColor">?attr/primary</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:padding">20dp</item>
     </style>
 
     <style name="big_welcome_title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_alignParentTop">true</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:layout_marginTop">46dp</item>
-        <item name="android:layout_marginLeft">16dp</item>
-        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">32dp</item>
         <item name="android:textSize">32sp</item>
+        <item name="android:textColor">?attr/primary</item>
     </style>
 
     <style name="subtle_separator">
@@ -81,7 +115,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:background">@android:color/black</item>
     </style>
-    
+
     <style name="title_bar">
         <item name="android:layout_height">56dp</item>
         <item name="android:elevation">4dp</item>
@@ -89,7 +123,8 @@
         <item name="android:paddingStart">72dp</item>
         <item name="android:textSize">20sp</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:background">#aaaaaa</item>
+        <item name="android:background">?attr/surface</item>
+        <item name="android:textColor">?attr/on_surface</item>
     </style>
 
     <style name="day_plan_time">
@@ -97,12 +132,14 @@
         <item name="android:layout_height">fill_parent</item>
         <item name="android:textSize">16sp</item>
         <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">?attr/on_surface</item>
     </style>
 
     <style name="day_plan_content">
         <item name="android:textSize">16sp</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">?attr/primary</item>
     </style>
 
 </resources>

@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,11 +30,12 @@ public class Successes extends AppCompatActivity {
     private List<DayPlan_Database.DataSet_DayPlan> daySuccessesList;
     private TextView successes_title_TV;
     private Date displayedDate;
-    private TextView back_B, next_B;
+    private ImageView back_B, next_B;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(MainActivity.color_theme);
         setContentView(R.layout.activity_successes);
 
         successes_RV = findViewById(R.id.successes_RV);

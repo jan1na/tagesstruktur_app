@@ -6,84 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="?attr/background"
         >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_dailybuddy_launcher_foreground"
+            android:layout_centerInParent="true"
+            >
+        </ImageView>
 
         <TextView
             android:id="@+id/welcome_title_TV"
             style="@style/big_welcome_title"
             android:text="@string/welcome_registration_title"
-            ></TextView>
+            >
+        </TextView>
+
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/login_LL"
-            android:visibility="invisible"
-            style="@style/linear_layout_login"
+            android:layout_gravity="bottom"
+            android:padding="32dp"
             >
 
-            <EditText
-                android:id="@+id/login_password_ET"
-                android:hint="Passwort"
-                android:inputType="textPassword"
-                style="@style/LoginButtons"
-                ></EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="14dp"
+            android:id="@+id/registration_name_ET"
+            android:hint="@string/name_hint_registration"
+            android:layout_gravity="bottom|center_horizontal"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLength="40"
+            android:textColor="?attr/on_background"
+            android:textColorHint="?attr/on_background_hint"
+            android:background="@drawable/surface_background"
+            android:elevation="4dp"
+            >
+        </EditText>
 
-            <Button
+        <Button
                 android:id="@+id/login_B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:text="@string/login_button_label"
+                style="@style/general_button"
                 >
             </Button>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:id="@+id/register_LL"
-            style="@style/linear_layout_login"
-
-            >
-            <TextView
-                style="@style/LoginButtons"
-                android:text="@string/registrations_instruction"
-                ></TextView>
-
-            <EditText
-                android:id="@+id/register_name_ET"
-                style="@style/LoginButtons"
-                android:hint="Name"></EditText>
-
-            <EditText
-                android:id="@+id/register_password_ET"
-                android:hint="Passwort"
-                android:inputType="textPassword"
-                style="@style/LoginButtons"
-                ></EditText>
-
-            <EditText
-                android:id="@+id/register_password_again_ET"
-                android:hint="Passwort wiederholen"
-                android:inputType="textPassword"
-                style="@style/LoginButtons"
-                ></EditText>
-            <Button
-                android:id="@+id/register_B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/registrate_login_label"
-                >
-            </Button>
-
-        </LinearLayout>
+    </LinearLayout>
 
 
-    </RelativeLayout>
+
+
+    </FrameLayout>
 
 
 

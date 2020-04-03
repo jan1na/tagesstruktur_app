@@ -4,16 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="4dp"
+    android:layout_margin="8dp"
     android:elevation="4dp"
     android:id="@+id/recycler_view_success_row"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@drawable/surface_background"
     >
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/image_success_IV"
+        android:layout_margin="4dp"
         >
 
     </ImageView>
@@ -23,7 +24,8 @@
         android:minHeight="48dp"
         android:id="@+id/text_success_TV"
         android:gravity="center"
-        android:textSize="16sp"
+        android:textSize="24sp"
+        android:textColor="?attr/primary"
         >
 
     </TextView>

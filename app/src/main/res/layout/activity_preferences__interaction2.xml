@@ -6,47 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".Preferences_Interaction2">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:background="?attr/background"
+        >
 
-        <TextView
-            android:id="@+id/textView"
-            android:padding="20dp"
-            android:textSize="18sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sport_radio_group_text" />
-
-        <RadioGroup
-            android:id="@+id/radio_group_sport"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="20dp">
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
 
-            <RadioButton
-                android:layout_width="match_parent"
+            <LinearLayout
+                style="@style/preferences_linear_layout"
                 android:layout_height="wrap_content"
-                android:id="@+id/sport_vormittag"
-                android:checked="true"
-                android:text="@string/radio_button_vormittags_sport"/>
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/sport_nachmittag"
-                android:text="@string/radio_button_nachmittags_sport"/>
-        </RadioGroup>
+                android:background="@drawable/surface_background">
 
-        <Button
-            android:id="@+id/button_sport"
-            android:layout_width="match_parent"
-            android:layout_height="61dp"
-            android:text="@string/Button_plan_erstellung"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/preferences_text"
+                    android:text="@string/sport_radio_group_text" />
 
-    </LinearLayout>
+                <RadioGroup
+                    android:id="@+id/radio_group_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp">
+
+                    <RadioButton
+                        android:id="@+id/sport_vormittag"
+                        android:checked="true"
+                        android:text="@string/radio_button_vormittags_sport"
+                        style="@style/preferences_radio_bottom"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/sport_nachmittag"
+                        android:text="@string/radio_button_nachmittags_sport"
+                        style="@style/preferences_radio_bottom"
+                        />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_sport"
+                style="@style/general_button"
+                android:text="@string/Button_plan_erstellung"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

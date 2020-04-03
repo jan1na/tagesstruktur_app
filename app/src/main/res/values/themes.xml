@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Light"
+        parent="AppTheme">
+        <item name="primary">@color/primary_l</item>
+        <item name="primary_dark">@color/primary_dark_l</item>
+        <item name="primary_light">@color/primary_light_l</item>
+        <item name="secondary">@color/secondary_l</item>
+        <item name="secondary_dark">@color/secondary_dark_l</item>
+        <item name="secondary_light">@color/secondary_light_l</item>
+        <item name="error">@color/error_l</item>
+        <item name="background">@color/background_l</item>
+        <item name="surface">@color/surface_l</item>
+        <item name="on_primary">@color/on_primary_l</item>
+        <item name="on_secondary">@color/on_secondary_l</item>
+        <item name="on_surface">@color/on_surface_l</item>
+        <item name="on_background">@color/on_background_l</item>
+        <item name="on_error">@color/on_error_l</item>
+        <item name="on_background_hint">@color/on_background_hint_l</item>
+    </style>
+
+    <style name="AppTheme.Dark"
+        parent="AppTheme">
+        <item name="primary">@color/primary_d</item>
+        <item name="primary_dark">@color/primary_dark_d</item>
+        <item name="primary_light">@color/primary_light_d</item>
+        <item name="secondary">@color/secondary_d</item>
+        <item name="secondary_dark">@color/secondary_dark_d</item>
+        <item name="secondary_light">@color/secondary_light_d</item>
+        <item name="error">@color/error_d</item>
+        <item name="background">@color/background_d</item>
+        <item name="surface">@color/surface_d</item>
+        <item name="on_primary">@color/on_primary_d</item>
+        <item name="on_secondary">@color/on_secondary_d</item>
+        <item name="on_surface">@color/on_surface_d</item>
+        <item name="on_background">@color/on_background_d</item>
+        <item name="on_error">@color/on_error_d</item>
+        <item name="on_background_hint">@color/on_background_hint_d</item>
+    </style>
+
+
+
+</resources>

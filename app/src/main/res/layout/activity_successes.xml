@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_blue_light">
+        android:background="?attr/background">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -24,42 +24,39 @@
         </RelativeLayout>
 
 
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:id="@+id/successes_title_TV"
             android:elevation="4dp"
-            android:gravity="center"
-            android:background="@android:color/holo_blue_bright"
-            >
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:id="@+id/success_back_B"
-            android:elevation="4dp"
-            android:text="@string/successes_back_button_sign"
-            android:textStyle="bold"
-            android:padding="12dp"
-            android:background="@android:color/holo_blue_dark"
+            android:background="?attr/surface"
             >
 
-        </TextView>
+            <TextView
+                android:id="@+id/successes_title_TV"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:textColor="?attr/on_surface"
+                android:gravity="center"></TextView>
 
-        <TextView
-            android:background="@android:color/holo_blue_dark"
-            android:padding="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:id="@+id/success_next_B"
-            android:layout_gravity="right"
-            android:elevation="4dp"
-            android:text="@string/successes_next_button_sign"
-            android:textStyle="bold"
-            >
-        </TextView>
+            <ImageView
+                android:id="@+id/success_back_B"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:src="@drawable/left_arrow_icon"
+                android:tint="?attr/on_surface"
+                ></ImageView>
+
+            <ImageView
+                android:id="@+id/success_next_B"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_margin="4dp"
+                android:src="@drawable/right_arrow_icon"
+                android:tint="?attr/on_surface"></ImageView>
+        </FrameLayout>
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

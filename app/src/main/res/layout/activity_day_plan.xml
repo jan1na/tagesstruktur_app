@@ -9,7 +9,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray">
+        android:background="?attr/background">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -39,7 +39,8 @@
             android:layout_marginRight="32dp"
             android:layout_marginLeft="32dp"
             android:id="@+id/activity_in_focus_RL"
-            android:background="@android:color/holo_blue_light"
+            android:background="@drawable/surface_background"
+            android:elevation="4dp"
             >
 
             <TextView
@@ -49,6 +50,7 @@
                 android:id="@+id/activity_in_focus_TV"
                 android:gravity="center"
                 android:textSize="24sp"
+                android:textColor="?attr/primary"
                 ></TextView>
             <ImageView
                 android:layout_width="match_parent"
@@ -67,6 +69,7 @@
                 android:id="@+id/add_picture_to_activity_TV"
                 android:gravity="center"
                 android:layout_below="@id/activity_in_focus_TV"
+                android:textColor="?attr/on_background_hint"
                 >
 
             </TextView>
@@ -81,7 +84,7 @@
             android:layout_gravity="center"
             android:layout_margin="16dp"
             android:alpha="0.8"
-            android:background="@android:color/white"
+            android:background="@drawable/surface_background"
             android:visibility="invisible">
 
             <DatePicker
@@ -91,7 +94,8 @@
                 android:layout_centerInParent="true"
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                />
 
             <TimePicker
                 android:id="@+id/time_picker"
@@ -99,7 +103,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:timePickerMode="spinner"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                />
 
             <EditText
                 android:id="@+id/get_activity_ET"
@@ -118,6 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginBottom="30dp"
+            style="@style/general_button"
             android:text="wählen"
             android:visibility="invisible">
 

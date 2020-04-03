@@ -3,4 +3,45 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+
+    <!-- light mode -->
+    <color name="primary_l">#2fc9b5</color>
+    <color name="primary_light_l">#70fde7</color>
+    <color name="primary_dark_l">#009785</color>
+    <color name="secondary_l">#f4ba00</color>
+    <color name="secondary_light_l">#ffec4d</color>
+    <color name="secondary_dark_l">#bc8a00</color>
+    <color name="on_primary_l">#000000</color>
+    <color name="on_secondary_l">#000000</color>
+    <color name="on_background_l">#000000</color>
+    <color name="error_l">#ff0000</color>
+    <color name="background_l">#ffffff</color>
+    <color name="surface_l">#ffffff</color>
+    <color name="on_surface_l">#000000</color>
+    <color name="on_error_l">#ffffff</color>
+    <color name="on_background_hint_l">#404040</color>
+
+
+    <!-- dark mode -->
+    <color name="primary_d">#009785</color>
+    <color name="primary_light_d">#2fc9b5</color>
+    <color name="primary_dark_d">#009785</color>
+    <color name="secondary_d">#bc8a00</color>
+    <color name="secondary_light_d">#f4ba00</color>
+    <color name="secondary_dark_d">#bc8a00</color>
+    <color name="on_primary_d">#000000</color>
+    <color name="on_secondary_d">#000000</color>
+    <color name="on_background_d">#ffffff</color>
+    <color name="error_d">#cf6679</color>
+    <color name="background_d">#121212</color>
+    <color name="surface_d">#202020</color>
+    <color name="on_surface_d">#ffffff</color>
+    <color name="on_error_d">#000000</color>
+    <color name="on_background_hint_d">#aaaaaa</color>
+
+
+
 </resources>
+
+

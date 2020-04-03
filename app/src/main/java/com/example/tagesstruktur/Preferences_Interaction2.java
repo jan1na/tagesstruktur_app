@@ -19,6 +19,7 @@ public class Preferences_Interaction2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(MainActivity.color_theme);
         setContentView(R.layout.activity_preferences__interaction2);
         Bundle extras = getIntent().getExtras();
         if(extras!= null){

@@ -5,7 +5,10 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:minHeight="48dp"
-    android:background="@android:color/white"
+    android:background="?attr/surface"
+    android:layout_marginBottom="1dp"
+    android:elevation="1dp"
+    android:padding="6dp"
 
     >
 
@@ -21,7 +24,6 @@
         android:id="@+id/day_plan_activity_row_TV"
         android:layout_width="match_parent"
         style="@style/day_plan_content"
-        android:background="@drawable/recycler_view_element_bottom_border"
         />
 
 </LinearLayout>

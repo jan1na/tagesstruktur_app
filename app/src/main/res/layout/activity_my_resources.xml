@@ -9,28 +9,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/ressources_SV"
+        android:background="?attr/background"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Meine Ressourcen"
-            android:textSize="32dp"
-            android:layout_margin="15dp"
+            android:orientation="vertical"
             >
-        </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Meine Ressourcen"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:background="?attr/surface"
+                android:textColor="?attr/on_surface"
+                >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/surface_background"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                >
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fähigkeiten"
                 style="@style/resource_titles"
                 >
-
-
-
             </TextView>
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,34 +51,26 @@
             android:id="@+id/skills_LL"
             >
 
-             <!--
-            <TextView
-                style="@style/resource_attributes"
-                android:text="Fähigkeit 1"
-                >
-
-
-            </TextView>
-
-
-            <TextView
-                style="@style/resource_attributes"
-                android:text="Fähigkeit 1"
-                >
-
-            </TextView>
-            -->
         </LinearLayout>
             <Button
                 android:id="@+id/add_skill_B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/general_button"
                 android:text="neue Fähigkeit hinzufügen"
                 android:layout_gravity="center_horizontal"
                 >
 
             </Button>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/surface_background"
+            android:layout_margin="8dp"
+            android:elevation="4dp"
+            >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,20 +83,21 @@
                 android:id="@+id/activities_LL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
 
 
             </LinearLayout>
             <Button
                 android:id="@+id/add_activity_B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/general_button"
                 android:text="neue Aktivität hinzufügen"
                 android:layout_gravity="center_horizontal"
                 >
 
             </Button>
+        </LinearLayout>
 
     </LinearLayout>
     </ScrollView>

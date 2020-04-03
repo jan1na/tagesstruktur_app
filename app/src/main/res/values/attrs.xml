@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <attr name="primary" format="reference" />
+    <attr name="primary_dark" format="reference" />
+    <attr name="secondary" format="reference" />
+    <attr name="secondary_light" format="reference" />
+    <attr name="secondary_dark" format="reference" />
+    <attr name="primary_light" format="reference" />
+    <attr name="on_primary" format="reference" />
+    <attr name="on_secondary" format="reference" />
+    <attr name="error" fromat="reference"/>
+    <attr name="surface" fromat="reference"/>
+    <attr name="on_background" fromat="reference"/>
+    <attr name="on_surface" fromat="reference"/>
+    <attr name="on_error" fromat="reference"/>
+    <attr name="on_background_hint" format="reference" />
+
+
+</resources>

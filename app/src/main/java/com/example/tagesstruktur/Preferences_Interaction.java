@@ -22,16 +22,20 @@ public class Preferences_Interaction extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(MainActivity.color_theme);
         setContentView(R.layout.activity_preferences__interaction);
 
         sp_frueh = (Spinner) findViewById(R.id.fruehstueck_spinner);
         sp_mittag = (Spinner) findViewById(R.id.mittagessen_spinner);
         sp_abend = (Spinner) findViewById(R.id.abendessen_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
+        //final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                //R.array.time_array, android.R.layout.simple_spinner_item);
         final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.time_array, android.R.layout.simple_spinner_item);
+                R.array.time_array, R.layout.spinner_default_item);
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.spinner_item);
         // Apply the adapter to the spinner
         sp_frueh.setAdapter(adapter);
         sp_mittag.setAdapter(adapter);

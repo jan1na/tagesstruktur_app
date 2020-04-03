@@ -30,6 +30,7 @@ public class My_resources extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(MainActivity.color_theme);
         setContentView(R.layout.activity_my_resources);
 
         skills_storage = new Internal_Storage(this, "skills");
