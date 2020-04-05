@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
        <!-- Customize your theme here. -->
         <item name="colorPrimary">?attr/primary</item>
-        <item name="colorPrimaryDark">?attr/primary_dark</item>
+        <item name="colorPrimaryDark">?attr/status_bar</item>
         <item name="colorAccent">?attr/secondary</item>
     </style>
 
@@ -23,7 +23,7 @@
     <style name="general_button">
         <item name="android:background">@drawable/general_button</item>
         <item name="android:textColor">?attr/on_primary</item>
-        <item name="android:padding">12dp</item>
+        <item name="android:padding">8dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
@@ -64,8 +64,8 @@
         <item name="android:textSize">14sp</item>
         <item name="android:layout_margin">8dp</item>
         <item name="elevation">4dp</item>
-        <item name="android:textColor">?attr/on_primary</item>
-        <item name="android:background">@drawable/general_button</item>
+        <item name="android:textColor">?attr/on_surface</item>
+        <item name="android:background">@drawable/surface_background</item>
     </style>
 
     <style name="menu_buttons_bottom">
@@ -76,10 +76,10 @@
     </style>
 
     <style name="resource_titles">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:layout_margin">10dp</item>
         <item name="android:padding">10dp</item>
-        <item name="android:textColor">?attr/on_surface</item>
+        <item name="android:textColor">?attr/primary</item>
     </style>
 
     <style name="resource_attributes">
@@ -120,11 +120,10 @@
         <item name="android:layout_height">56dp</item>
         <item name="android:elevation">4dp</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:paddingStart">72dp</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:background">?attr/surface</item>
-        <item name="android:textColor">?attr/on_surface</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?attr/top_bar</item>
+        <item name="android:textColor">?attr/on_top_bar</item>
     </style>
 
     <style name="day_plan_time">
@@ -140,6 +139,36 @@
         <item name="android:layout_height">fill_parent</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:textColor">?attr/primary</item>
+    </style>
+
+    <style name="resource_LL">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/surface_background</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="resource_item_LL">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingStart">26dp</item>
+        <item name="android:paddingEnd">26dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="add_resource_icon">
+        <item name="tint">?attr/secondary</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_width">45dp</item>
+        <item name="android:src">@drawable/add_icon</item>
     </style>
 
 </resources>

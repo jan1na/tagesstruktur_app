@@ -18,6 +18,10 @@
         <item name="on_background">@color/on_background_l</item>
         <item name="on_error">@color/on_error_l</item>
         <item name="on_background_hint">@color/on_background_hint_l</item>
+        <item name="top_bar">@color/top_bar_l</item>
+        <item name="status_bar">@color/status_bar_l</item>
+        <item name="on_top_bar">@color/on_top_bar_l</item>
+        <item name="on_background_divider">@color/on_background_divider_l</item>
     </style>
 
     <style name="AppTheme.Dark"
@@ -37,6 +41,10 @@
         <item name="on_background">@color/on_background_d</item>
         <item name="on_error">@color/on_error_d</item>
         <item name="on_background_hint">@color/on_background_hint_d</item>
+        <item name="top_bar">@color/top_bar_d</item>
+        <item name="status_bar">@color/status_bar_d</item>
+        <item name="on_top_bar">@color/on_top_bar_d</item>
+        <item name="on_background_divider">@color/on_background_divider_d</item>
     </style>
 
 

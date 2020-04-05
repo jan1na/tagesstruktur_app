@@ -1,31 +1,28 @@
 package com.example.tagesstruktur;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
-
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import static java.text.DateFormat.getDateInstance;
-
 public class Menu extends AppCompatActivity {
 
     private LinearLayout menu_LL;
     private List<Button> buttons;
-    private TextView date_TV, my_rescoures_menu_TV, day_plan_menu_TV, successes_menu_TV, burger_menu_icon;
+    private TextView date_TV, my_rescoures_menu_TV, day_plan_menu_TV, successes_menu_TV;
     private Switch color_theme_switch;
+    private ImageView burger_menu_icon;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -84,6 +81,14 @@ public class Menu extends AppCompatActivity {
             color_theme_switch.setChecked(true);
         }
         color_theme_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            /**
+             * In the file "color_theme" is ether a "0" or "1" to save the last selected color theme.
+             * "0" -> Light Theme
+             * "1" -> Dark Theme
+             *
+             * @param buttonView
+             * @param isChecked
+             */
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Internal_Storage color_theme_data = new Internal_Storage(Menu.this, getString(R.string.color_theme_datafile_name));
@@ -94,15 +99,24 @@ public class Menu extends AppCompatActivity {
                     MainActivity.color_theme = R.style.AppTheme_Light;
                     color_theme_data.overrideData("0");
                 }
-                // todo: maybe better way to refresh activity after changing color theme ?!
-                Intent intent = new Intent(Menu.this, Menu.class);
-                startActivity(intent);
-                overridePendingTransition(0,0);
+                finish();
+                startActivity(getIntent());
+                overridePendingTransition(0, 0);
             }
         });
 
 
 
 
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        // to not get to the FirstFragment
+        Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+        homeIntent.addCategory( Intent.CATEGORY_HOME );
+        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(homeIntent);
     }
 }

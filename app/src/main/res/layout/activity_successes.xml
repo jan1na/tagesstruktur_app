@@ -27,16 +27,17 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:elevation="4dp"
-            android:background="?attr/surface"
-            >
+            android:background="?attr/top_bar"
+            android:elevation="4dp">
 
             <TextView
                 android:id="@+id/successes_title_TV"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:textColor="?attr/on_surface"
-                android:gravity="center"></TextView>
+                android:gravity="center"
+                android:textColor="?attr/on_top_bar">
+
+            </TextView>
 
             <ImageView
                 android:id="@+id/success_back_B"
@@ -45,8 +46,9 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="4dp"
                 android:src="@drawable/left_arrow_icon"
-                android:tint="?attr/on_surface"
-                ></ImageView>
+                android:tint="?attr/on_top_bar">
+
+            </ImageView>
 
             <ImageView
                 android:id="@+id/success_next_B"
@@ -55,7 +57,9 @@
                 android:layout_gravity="center_vertical|end"
                 android:layout_margin="4dp"
                 android:src="@drawable/right_arrow_icon"
-                android:tint="?attr/on_surface"></ImageView>
+                android:tint="?attr/on_top_bar">
+
+            </ImageView>
         </FrameLayout>
     </FrameLayout>
 

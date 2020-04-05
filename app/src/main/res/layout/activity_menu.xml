@@ -12,7 +12,7 @@
                android:layout_width="match_parent"
                android:layout_height="56dp"
                android:orientation="horizontal"
-               android:background="?attr/surface"
+               android:background="?attr/top_bar"
                android:elevation="4dp"
                >
                <TextView
@@ -23,22 +23,22 @@
                    android:textSize="24dp"
                    android:text="22.03.2020"
                    android:gravity="center"
-                   android:textColor="?attr/on_surface"
+                   android:textColor="?attr/on_top_bar"
                    >
 
                </TextView>
-               <TextView
+               <ImageView
                    android:id="@+id/burger_menu_icon"
-                   android:layout_width="wrap_content"
-                   android:layout_height="match_parent"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
                    android:layout_alignParentRight="true"
-                   android:text="Menü"
-                   android:textColor="?attr/on_background_hint"
-                   android:gravity="center"
+                   android:src="@drawable/burger_menu_icon"
+                   android:tint="?attr/on_top_bar"
+                   android:layout_centerVertical="true"
                    android:layout_marginEnd="6dp"
                    >
 
-               </TextView>
+               </ImageView>
 
                <Switch
                    android:id="@+id/color_theme_switch"

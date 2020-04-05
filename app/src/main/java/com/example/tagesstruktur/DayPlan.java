@@ -1,6 +1,6 @@
 package com.example.tagesstruktur;
 
-import androidx.annotation.ColorInt;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -10,21 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
-import android.graphics.Paint;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -32,9 +25,6 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.lang.reflect.Field;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -61,7 +51,6 @@ public class DayPlan extends AppCompatActivity {
     private int positionInAdapter = 0;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +71,8 @@ public class DayPlan extends AppCompatActivity {
         image_in_focus_IV = findViewById(R.id.image_in_focus_IV);
 
 
+        // todo: datepicker and timepicker textcolor needs to be changed to R.attrs.on_surface
+
         // get all appointments of today out of the database
         dayPlan_database = new DayPlan_Database(this);
         dayPlanList = dayPlan_database.getTodayDayPlan();
@@ -92,8 +83,7 @@ public class DayPlan extends AppCompatActivity {
         adapter.setClickListener(new RecyclerViewAdapter_DayPlan.ItemClickListener() {
             @Override
             public void onItemClick(View view, final int position) {
-                Toast.makeText(DayPlan.this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
-                if(activity_in_focus_RL.getVisibility() == View.INVISIBLE) {
+                if (activity_in_focus_RL.getVisibility() == View.INVISIBLE) {
 
                     activity_in_focus_RL.setVisibility(View.VISIBLE);
                     activity_in_focus_TV.setText(adapter.getItem(position).getActivity());
@@ -114,7 +104,7 @@ public class DayPlan extends AppCompatActivity {
                     } else { // picture uri is already in database so it just needs to be displayed
                         add_picture_to_activity_TV.setVisibility(View.INVISIBLE);
                         image_in_focus_IV.setVisibility(View.VISIBLE);
-                        System.out.println("saved uri: "+adapter.getItem(position).getPicture());
+                        System.out.println("saved uri: " + adapter.getItem(position).getPicture());
                         image_in_focus_IV.setImageURI(adapter.getItem(position).getPicture());
                     }
                 }
@@ -184,7 +174,7 @@ public class DayPlan extends AppCompatActivity {
                     String day = dayFormat.format(Calendar.getInstance().getTime());
                     try {
                         Date start = Internal_Database.dateFormat.parse(day + " 00:00:00"), end = Internal_Database.dateFormat.parse(day + " 23:59:59");
-                        if(start.compareTo(new_Date) <= 0 && end.compareTo(new_Date) >=0) {
+                        if (start.compareTo(new_Date) <= 0 && end.compareTo(new_Date) >= 0) {
 
                             // find correct index to insert new appointment
                             int insertIndex = 0;
@@ -205,33 +195,32 @@ public class DayPlan extends AppCompatActivity {
 
     }
 
-    private void requestGalleryPermission(){
+    private void requestGalleryPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
                 && ContextCompat.checkSelfPermission(DayPlan.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(DayPlan.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},1);
+            ActivityCompat.requestPermissions(DayPlan.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
         }
     }
 
-    private void pickFromGallery(){
+    private void pickFromGallery() {
         //Create an Intent with action as ACTION_PICK
-        Intent intent=new Intent(Intent.ACTION_PICK);
+        Intent intent = new Intent(Intent.ACTION_PICK);
         // Sets the type as image/*. This ensures only components of type image are selected
         intent.setType("image/*");
         //We pass an extra array with the accepted mime types. This will ensure only components with these MIME types as targeted.
         //String[] mimeTypes = {"image/jpeg", "image/png"};
         //intent.putExtra(Intent.EXTRA_MIME_TYPES,mimeTypes);
         // Launching the Intent
-        startActivityForResult(intent,101);
+        startActivityForResult(intent, 101);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 101 && resultCode == RESULT_OK && data!=null)
-        {
+        if (requestCode == 101 && resultCode == RESULT_OK && data != null) {
             // after picture was selected in gallery
             Uri uri = data.getData();
-            System.out.println("URI: "+uri);
+            System.out.println("URI: " + uri);
             image_in_focus_IV.setImageURI(uri);
             dayPlan_database.savePictureUri(uri, adapter.getItem(positionInAdapter));
             add_picture_to_activity_TV.setVisibility(View.INVISIBLE);
@@ -241,10 +230,9 @@ public class DayPlan extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         // code here to show dialog
-        if(activity_in_focus_RL.getVisibility() == View.VISIBLE){
+        if (activity_in_focus_RL.getVisibility() == View.VISIBLE) {
             activity_in_focus_RL.setVisibility(View.INVISIBLE);
             image_in_focus_IV.setImageResource(0);
             return;

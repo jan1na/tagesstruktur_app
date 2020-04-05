@@ -30,7 +30,7 @@
     <string name="successes_back_button_sign"><![CDATA[<-]]></string>
     <string name="successes_next_button_sign"><![CDATA[->]]></string>
     <string name="name_hint_registration">Name</string>
-    <string name="no_name_toast_message">Bitte tragen einen Namen ein!</string>
+    <string name="no_name_toast_message">Bitte trage einen Namen ein!</string>
     <string name="login_datafile_name">login</string>
     <string name="color_theme_datafile_name">color_theme</string>
     <string name="title_activity_main2">Main2Activity</string>
@@ -46,5 +46,9 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string name="resource_skills_filename">skills</string>
+    <string name="resource_activities_filename">activities</string>
+    <string name="add_resource_skills_ET_hint">Fähigkeit</string>
+    <string name="add_resource_activities_ET_hint">Aktivität</string>
 
 </resources>

@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:minHeight="48dp"
-    android:background="?attr/surface"
-    android:layout_marginBottom="1dp"
-    android:elevation="1dp"
-    android:padding="6dp"
+    android:orientation="vertical"
+    android:background="?attr/background"
 
     >
+    <TextView
+        android:background="?attr/on_background_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        ></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="48dp"
+        android:padding="6dp"
+        >
 
     <TextView
         android:layout_width="16dp"
@@ -25,5 +34,6 @@
         android:layout_width="match_parent"
         style="@style/day_plan_content"
         />
+</LinearLayout>
 
 </LinearLayout>

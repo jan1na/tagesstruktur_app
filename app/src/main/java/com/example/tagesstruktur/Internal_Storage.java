@@ -63,6 +63,21 @@ public class Internal_Storage {
         }
     }
 
+    public void overrideData(List<String> data){
+        try {
+            // Open Stream to write file.
+            FileOutputStream out = context.openFileOutput(file, MODE_PRIVATE);
+
+            for(String s: data){
+                s+="\n";
+                out.write(s.getBytes());
+            }
+            out.close();
+        } catch (Exception e) {
+            Toast.makeText(context,"Error in Internal Storage"+ e.getMessage(),Toast.LENGTH_SHORT).show();
+        }
+    }
+
     public boolean fileExists(){
         File f = context.getFileStreamPath(file);
         return !(f == null || !f.exists());

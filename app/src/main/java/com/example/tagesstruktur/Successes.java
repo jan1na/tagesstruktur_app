@@ -1,21 +1,13 @@
 package com.example.tagesstruktur;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -47,6 +39,7 @@ public class Successes extends AppCompatActivity {
 
         dayPlan_database = new DayPlan_Database(this);
         daySuccessesList = dayPlan_database.getTodaySuccesses();
+
 
         successes_RV.setLayoutManager(new LinearLayoutManager(this));
         adapter = new RecyclerViewAdapter_Successes(this, daySuccessesList);

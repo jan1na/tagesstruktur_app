@@ -9,14 +9,14 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class RecyclerViewAdapter_Successes extends RecyclerView.Adapter<RecyclerViewAdapter_Successes.ViewHolder> {
+public class RecyclerViewAdapter_Resources extends RecyclerView.Adapter<RecyclerViewAdapter_Resources.ViewHolder> {
 
-    private List<DayPlan_Database.DataSet_DayPlan> mData;
+    private List<String> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    RecyclerViewAdapter_Successes(Context context, List<DayPlan_Database.DataSet_DayPlan> data) {
+    RecyclerViewAdapter_Resources(Context context, List<String> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -24,17 +24,14 @@ public class RecyclerViewAdapter_Successes extends RecyclerView.Adapter<Recycler
     // inflates the row layout from xml when needed
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.recycler_view_successes_row, parent, false);
+        View view = mInflater.inflate(R.layout.recycler_view_resources_row, parent, false);
         return new ViewHolder(view);
     }
 
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.success_TV.setText(mData.get(position).getActivity());
-        if(mData.get(position).isPictureSet()){
-            holder.success_IV.setImageURI(mData.get(position).getPicture());
-        }
+        holder.resource_TV.setText(mData.get(position));
     }
 
     // total number of rows
@@ -45,25 +42,32 @@ public class RecyclerViewAdapter_Successes extends RecyclerView.Adapter<Recycler
 
 
     // stores and recycles views as they are scrolled off screen
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView success_TV;
-        ImageView success_IV;
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        TextView resource_TV;
+        ImageView remove_icon;
 
         ViewHolder(View itemView) {
             super(itemView);
-            success_TV = itemView.findViewById(R.id.text_success_TV);
-            success_IV = itemView.findViewById(R.id.image_success_IV);
+            resource_TV = itemView.findViewById(R.id.resource_row_TV);
+            remove_icon = itemView.findViewById(R.id.resource_row_remove_icon);
             itemView.setOnClickListener(this);
+            remove_icon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mClickListener != null) mClickListener.onItemClick(v, getAdapterPosition());
+                }
+            });
         }
 
         @Override
         public void onClick(View view) {
-            if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
+            if (mClickListener != null) mClickListener.onViewClick(view, getAdapterPosition());
         }
+
     }
 
     // convenience method for getting data at click position
-    DayPlan_Database.DataSet getItem(int id) {
+    String getItem(int id) {
         return mData.get(id);
     }
 
@@ -75,5 +79,6 @@ public class RecyclerViewAdapter_Successes extends RecyclerView.Adapter<Recycler
     // parent activity will implement this method to respond to click events
     public interface ItemClickListener {
         void onItemClick(View view, int position);
+        void onViewClick(View view, int position);
     }
 }

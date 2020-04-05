@@ -5,53 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".My_resources">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/top_bar"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="Meine Ressourcen"
+        android:textColor="?attr/on_top_bar"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
     <ScrollView
+        android:id="@+id/resources_SV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/ressources_SV"
-        android:background="?attr/background"
-        >
+        android:layout_marginTop="56dp"
+        android:background="?attr/background">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Meine Ressourcen"
-                android:textSize="24sp"
-                android:gravity="center"
-                android:background="?attr/surface"
-                android:textColor="?attr/on_surface"
-                >
-            </TextView>
+            <LinearLayout style="@style/resource_LL">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/surface_background"
-                android:layout_margin="8dp"
-                android:elevation="4dp"
-                >
+                <TextView
+                    style="@style/resource_titles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fähigkeiten"></TextView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fähigkeiten"
-                style="@style/resource_titles"
-                >
-            </TextView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/skills_LL"
-            >
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/resource_skill_RV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/skills_LL"
+                    style="@style/resource_item_LL">
+
+                </LinearLayout>
+                <!--
             <Button
                 android:id="@+id/add_skill_B"
                 style="@style/general_button"
@@ -60,76 +63,112 @@
                 >
 
             </Button>
+            -->
+                <ImageView
+                    android:id="@+id/add_skill_B"
+                    style="@style/add_resource_icon">
+
+                </ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/resource_LL">
+
+                <TextView
+                    style="@style/resource_titles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lieblingsaktivitäten">
+
+                </TextView>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/resource_activities_RV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/activities_LL"
+                    style="@style/resource_item_LL">
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/add_activity_B"
+                    style="@style/add_resource_icon">
+
+                </ImageView>
+
+                <!--
+                <Button
+                    android:id="@+id/add_activity_B"
+                    style="@style/general_button"
+                    android:text="neue Aktivität hinzufügen"
+                    android:layout_gravity="center_horizontal"
+                    >
+
+                </Button>
+                -->
+            </LinearLayout>
+
+            <!-- musste ich einfügen damit man die elevation sieht -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp">
+
+            </TextView>
 
         </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/add_resource_RL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
             android:background="@drawable/surface_background"
-            android:layout_margin="8dp"
             android:elevation="4dp"
-            >
-            <TextView
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <EditText
+                android:id="@+id/add_resource_ET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lieblingsaktivitäten"
-                style="@style/resource_titles"
-                >
+                android:textColor="?attr/on_surface"
+                android:textColorHint="?attr/on_background_hint">
 
-            </TextView>
-            <LinearLayout
-                android:id="@+id/activities_LL"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+            </EditText>
 
-
-
-            </LinearLayout>
             <Button
-                android:id="@+id/add_activity_B"
+                android:id="@+id/add_resource_B"
                 style="@style/general_button"
-                android:text="neue Aktivität hinzufügen"
-                android:layout_gravity="center_horizontal"
-                >
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hinzufügen">
 
             </Button>
         </LinearLayout>
 
-    </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/resources_top_RL"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        android:id="@+id/add_resource_RL"
-        >
-        <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerInParent="true"
-            android:layout_margin="20dp"
-            >
-        <EditText
-            android:id="@+id/add_resource_ET"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </EditText>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/add_resource_B"
-            android:text="Hinzufügen"
-            >
-
-        </Button>
-    </LinearLayout>
+        android:layout_height="match_parent">
 
     </RelativeLayout>
 

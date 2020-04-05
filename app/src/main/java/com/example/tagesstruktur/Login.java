@@ -1,24 +1,16 @@
 package com.example.tagesstruktur;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Login extends AppCompatActivity {
-    private List<String> loginData;
     private Internal_Storage internal_storage;
-    private LinearLayout login_LL;
     private Button login_B;
     private TextView welcome_title_TV;
     private EditText name_register_ET;

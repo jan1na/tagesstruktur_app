@@ -16,6 +16,10 @@
     <attr name="on_surface" fromat="reference"/>
     <attr name="on_error" fromat="reference"/>
     <attr name="on_background_hint" format="reference" />
+    <attr name="top_bar" format="reference"/>
+    <attr name="status_bar" format="reference"/>
+    <attr name="on_top_bar" format="reference"/>
+    <attr name="on_background_divider" format="reference"/>
 
 
 </resources>

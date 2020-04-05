@@ -17,6 +17,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     public static String user_name;
     public static int color_theme;
+    public static ColorTheme colorTheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +33,14 @@ public class MainActivity extends AppCompatActivity {
 
             if(color_theme_data.readData().get(0).equals("0")){
                 color_theme = R.style.AppTheme_Light;
+                colorTheme = ColorTheme.LIGHT;
             }else {
                 color_theme = R.style.AppTheme_Dark;
+                colorTheme = ColorTheme.DARK;
             }
         }else {
             color_theme = R.style.AppTheme_Light;
+            colorTheme = ColorTheme.LIGHT;
         }
         setTheme(color_theme);
 
@@ -60,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
+
 
     public static int getColorWithAttrs(Context context, int attrs){
         TypedValue typedValue = new TypedValue();
